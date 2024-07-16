@@ -1,0 +1,30 @@
+.parent 
+{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    position: relative;
+}
+.child
+    {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+    }
+li button
+    {
+        display: none;
+    }
+.slick-dots
+    {
+        display: flex;
+        position: absolute;
+        gap:10px;
+        bottom:-10px;
+        left:50%;
+    }
+.slick-active{
+                color:hotpink;
+            }

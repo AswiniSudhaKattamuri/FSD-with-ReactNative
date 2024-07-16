@@ -1,0 +1,28 @@
+.parent{
+   position: relative;
+}
+.child1{
+     width: fit-content;
+     height: fit-content;
+     color: aquamarine;
+     font-size: 22px;
+     background-color: pink;
+     border-radius: 17px;
+     position: absolute;
+}
+.child2{
+  width: fit-content;
+  height: fit-content;
+  font-size: 32px;
+  position: absolute;
+  top: 50px;
+  display:none;
+}
+.parent:hover .child2{
+    display: block;
+    cursor: pointer;
+}
+.child2 p:hover{
+    background-color: azure;
+}
+

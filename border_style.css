@@ -1,0 +1,74 @@
+/* .mydiv{
+    overflow: hidden;
+    width:500px;
+    border: 2px dashed rgb(200, 0, 255);
+    border-width: 10px;
+    border-color: rgb(147, 94, 24);
+    border-style: solid; 
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-top-color: rgb(255, 0, 136);
+    border-bottom: 13px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(19, 45, 130);
+    border-left-width: 14px;
+    border-left-color: rgb(14, 96, 7);
+    border-right-width: 15px;
+    border-right-color: rgba(195, 28, 61, 0.589);
+} */
+ /* .mydiv1{
+    border:2px dotted hotpink;
+    max-width: 700px;
+    width:fit-content
+ } */
+  /* .mydiv2{
+    border:5px solid navy;
+    height:100svh;
+  } */
+   /* #unique{
+    height: 300px;
+    width:300px;
+    margin:60px;
+    padding:30px;
+    border:5px solid hotpink;
+   } */
+    /* *{
+        background-color: rgb(135, 196, 222);
+    } */
+    /* .myclass{
+        height:300px;
+        width:300px;
+        border:2px solid pink;
+        margin:40px;
+        border-top-left-radius: 150px;
+        /* border-top-right-radius: 300px; */
+        /* border-bottom-left-radius: 300px; */
+        /* border-bottom-right-radius: 150px;
+        
+    }
+    img{
+        height:300px;
+        width:300px;
+        border:2px solid navy;
+        margin:40px;
+        border-top-left-radius: 300px;
+        border-top-right-radius: 300px;
+        border-bottom-left-radius: 300px;
+        border-bottom-right-radius: 300px;
+    } */ 
+     .mybox{
+        height:300px;
+        width:300px;
+        border:2px solid pink;
+        margin:40px;
+        box-shadow:  0px 0px 10px 20px rgb(214, 172, 185);
+
+     }
+     .mybox1{
+        height:300px;
+        width:300px;
+        border:2px solid pink;
+        margin:40px;
+        box-shadow: 15px 15px rgb(173, 144, 201);
+     }
+

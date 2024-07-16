@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .parent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .header div {
+            color: white;
+            text-align: center;
+            height: 25px;
+            border: 2px solid white;
+            background-color: rgb(47, 241, 255);
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .header .html, .header .css, .header .download {
+            background-color: skyblue;
+        }
+        .header .actions {
+            background-color: red;
+            position: relative;
+        }
+        .header .actions select {
+            margin-left: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        .profile-container {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+        }
+        .profile-card {
+            flex: 1;
+            background: #f4f4f9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .profile-card h2 {
+            margin: 10px 0;
+        }
+        .profile-card p {
+            margin: 5px 0;
+            color: gray;
+        }
+        .profile-card .btn {
+            margin: 10px 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid;
+            display: inline-block;
+        }
+        .profile-card .follow-btn {
+            background-color: rgb(47, 137, 255);
+            color: white;
+            border-color: rgb(47, 137, 255);
+        }
+        .profile-card .message-btn {
+            background-color: white;
+            color: rgb(47, 137, 255);
+            border-color: rgb(47, 137, 255);
+        }
+        .profile-card .social-links {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .profile-card .social-links div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+        }
+        .profile-card .social-links div i {
+            color: #333;
+        }
+        .profile-card .social-links div p {
+            margin: 0;
+        }
+        .form-project-container {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .form-container, .project-status {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+        .form-container label {
+            font-weight: bold;
+        }
+        .form-container input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container .save-btn {
+            align-self: flex-start;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgb(47, 137, 255);
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+        .project-status h3 {
+            margin-bottom: 10px;
+        }
+        .project-status .status-bar {
+            margin-bottom: 15px;
+        }
+        .project-status .status-bar div {
+            height: 10px;
+            border-radius: 5px;
+        }
+        .project-status .status-bar .web-design {
+            width: 80%;
+            background-color: skyblue;
+        }
+        .project-status .status-bar .website-markup {
+            width: 70%;
+            background-color: red;
+        }
+        .project-status .status-bar .one-page {
+            width: 88%;
+            background-color: rgb(20, 202, 20);
+        }
+        .project-status .status-bar .mobile-template {
+            width: 60%;
+            background-color: yellow;
+        }
+        .project-status .status-bar .backend-api {
+            width: 65%;
+            background-color: rgb(52, 179, 230);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header">
+            <div class="preview">Preview</div>
+            <div class="html">HTML</div>
+            <div class="css">CSS</div>
+            <div class="download">Download</div>
+            <div class="actions">
+                Actions
+                <select>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="profile-card">
+                <img src="./john.png" alt="John Doe"/>
+                <h2>John Doe</h2>
+                <p>Full Stack Developer</p>
+                <p>Bay Area, San Francisco, CA</p>
+                <div class="btn follow-btn">Follow</div>
+                <div class="btn message-btn">Message</div>
+                <div class="social-links">
+                    <div><i class="fa-solid fa-globe"></i> <p>Website</p> <p>https://bootdey.com</p></div>
+                    <div><i class="fa-brands fa-github"></i> <p>Github</p> <p>bootdey</p></div>
+                    <div><i class="fa-brands fa-twitter"></i> <p>Twitter</p> <p>@bootdey</p></div>
+                    <div><i class="fa-brands fa-instagram"></i> <p>Instagram</p> <p>bootdey</p></div>
+                    <div><i class="fa-brands fa-facebook"></i> <p>Facebook</p> <p>bootdey</p></div>
+                </div>
+            </div>
+            <div class="form-project-container">
+                <div class="form-container">
+                    <form>
+                        <label>Full Name</label>
+                        <input type="text" value="John Doe"/>
+                        <label>Email</label>
+                        <input type="email" value="john@example.com"/>  
+                        <label>Phone</label>
+                        <input type="text" value="(239) 816-9029"/>  
+                        <label>Mobile</label>
+                        <input type="text" value="(320) 380-4539"/>  
+                        <label>Address</label>
+                        <input type="text" value="Bay Area, San Francisco, CA"/>  
+                </form>
+                <div class="save-btn">Save Changes</div>
+            </div>
+            <div class="project-status">
+                <h3>Project Status</h3>
+                <div class="status-bar">
+                    <div class="web-design"></div>
+                </div>
+                <div class="status-bar">
+                    <div class="website-markup"></div>
+                </div>
+                <div class="status-bar">
+                    <div class="one-page"></div>
+                </div>
+                <div class="status-bar">
+                    <div class="mobile-template"></div>
+                </div>
+                <div class="status-bar">
+                    <div class="backend-api"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

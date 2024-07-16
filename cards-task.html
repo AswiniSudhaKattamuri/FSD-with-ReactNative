@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            .parent {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            .parent .card1, .parent .card2, .parent .card3,.parent .card4,.parent .card5,.parent .card6  {
+                width: 210px;
+                height: 300px;
+                border: 2px solid ghostwhite;
+                border-radius: 10px;
+                padding: 2px;
+                margin: 70px;
+                cursor: pointer;
+                box-shadow: 0px 0px 10px 20px rgb(249, 248, 248);
+                position: relative; 
+            }
+            .c5a:hover, .c5c:hover, .c5e:hover{
+                transform: scale(1.08);
+            }
+            .card1 .c1a img, .card2 .c2a img, .card3 .c3a img,.card4 .c4a img,.card5 .c5a img,.card6 .c6a img {
+                width: 90%;
+                height: 80%;
+            }
+            .card1 .c1b,.card2 .c2b,.card3 .c3b,.card4 .c4b,.card5 .c5b,.card6 .c6b {
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 5px;
+                color: black; 
+            }
+            .card1 .c1c,.card2 .c2c,.card3 .c3c ,.card4 .c4c,.card5 .c5c,.card6 .c6c{
+                position: absolute;
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: red;
+                top: 247px;
+                right: 10px;
+            }
+            .card1::before,.card2::before,.card3::before,.card4::before,.card5::before,.card6::before{
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 0;
+                width: 10px;
+                height: 70px;
+                background-color: grey; 
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="card1">
+                <div class="c1a"><img src="./Magnum.png"></div>
+                <div class="c1b"><p><b>MAGNUM</b></p></div>
+                <div class="c1c"><p><b>ALT1015</b></p></div>
+            </div>
+            <div class="card2">
+                <div class="c2a"><img src="./Cache.png"></div>
+                <div class="c2b"><p><b>CACHE</b></p></div>
+                <div class="c2c"><p><b>ALT0835</b></p></div>
+            </div>
+            <div class="card3">
+                <div class="c3a"><img src="./rio.png"></div>
+                <div class="c3b"><p><b>RIO</b></p></div>
+                <div class="c3c"><p><b>ALT0901</b></p></div>
+            </div>
+            <div class="card4">
+                <div class="c4a"><img src="./Brisk.png"></div>
+                <div class="c4b"><p><b>BRISK</b></p></div>
+                <div class="c4c"><p><b>ALT0903</b></p></div>
+            </div>
+            <div class="card5">
+                <div class="c5a"><img src="./TWIST ll.png"></div>
+                <div class="c5b"><p><b>TWIST</b></p></div>
+                <div class="c5c"><p><b>ALT0670</b></p></div>
+            </div>
+            <div class="card6">
+                <div class="c6a"><img src="./GLOSTER.png"></div>
+                <div class="c6b"><p><b>GLOSTER</b></p></div>
+                <div class="c6c"><p><b>ALT0844A</b></p></div>
+            </div>
+            
+        </div>
+    </body>
+</html>

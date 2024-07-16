@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body, html {
+            margin: 0;
+        }
+        .parent1 {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('./bgbmobile.pnd.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .div0{
+            position: absolute;
+            top:-145px;
+            left:10px;
+            font-size: 20px;
+            color: rgb(128, 126, 126);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            z-index: 1;
+        }
+        .div1{
+            width:100%;
+            height:35px;
+            border: 1px solid rgb(128, 128, 128);
+            position: absolute;
+            top:-130px;
+            background-color: rgb(237, 231, 231);
+        }
+        .div1 i{
+            position: absolute;
+            right:10px;
+            top:10px;
+        }
+        .child1 {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .div2 {
+            color: white;
+            font-size:40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-width: 250px;
+            font-weight: 1000;
+        }
+        .div3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            max-width: 50%;
+            margin: 1 auto;
+        }
+        .div3 div {
+            position: relative;
+            right:10px;
+            top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 130px;
+            width: 170px;
+            border: 1px solid grey;
+            border-radius: 8px;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .div3 div i {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #0044cc;
+            border-radius:90px ;
+            padding: 9px;
+            background-color: rgb(236, 225, 225);
+        }
+        .div3 div p {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+        .div4{
+            color:rgb(239, 230, 230);
+            position: absolute;
+            top:200px;
+        }
+        .parent2{
+            position: relative;
+            height:600px;
+            width:100%;
+            border: 2px solid white;
+            background-color: rgb(249, 249, 249);
+        }
+        .div5{
+            font-size: clamp(40px,3vw,90px);
+            text-align: center;
+            font-weight: 500;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .div6{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .div7 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        .div7 div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid grey;
+            border-radius: 8px;
+            background-color: white;
+            text-align: left;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .div7 div i {
+           
+            font-size: 15px;
+            margin-right: 8px;
+            color:white;
+            border-radius:50% ;
+            padding: 8px;
+            background-color: rgb(15, 15, 206);
+        }
+        .div7 div p {
+            margin-top: 1px;
+            color: #333;
+            text-align :left;
+        }
+        .parent3 {
+        position: relative;
+        width: 100%;
+        height:80px;
+        border: 2px solid rgb(245, 240, 240);
+        background-color: rgb(249, 249, 249);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        }
+
+        .div8 {
+            flex: 1 1 100%; 
+            width: 530px;
+            margin: 70px auto;
+            padding: 30px;
+            border: 2px solid rgba(13, 13, 215, 0.644);
+            border-radius: 15px;
+            background-color: rgba(15, 15, 161, 0.865);
+            box-sizing: border-box;
+            
+        }
+
+        .div8a {
+            color: white;
+            font-size: 1.2em;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0 20px;
+        }
+
+        .div8b,
+        .div8c {
+            color: white;
+            font-size: 0.9em;
+            font-style: initial;
+            padding: 10px 20px;
+        }
+
+        .div8c {
+            padding-left: 5px;
+        }
+
+        .div8d {
+            color: white;
+            font-size: 0.8em;
+            padding: 10px 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 1px solid white;
+            border-radius: 15px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .div9 {
+            height: 290px;
+            width: 260px;
+            position: relative; 
+            bottom: 270px;
+            left: 350px; 
+            border: 2px solid rgb(227, 216, 216);
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .div9 img{
+            height: 300px;
+            width: 260px;
+            border-radius: 15px;
+            position: relative;
+            bottom: 22px; 
+            border:1px solid white;
+            left: -25px;
+        }
+        .parent4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            border: 2px solid white;
+            background-color: rgb(249, 249, 249);
+        }
+
+        .child4 {
+            flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    max-width: 100%;
+                    box-sizing: border-box;
+        }
+
+        .child4 img {
+            max-width: 80%; 
+            height: auto; 
+            max-height: 80%;
+            display: block; 
+        }
+
+        .child5 {
+            flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    max-width: 600px;
+        }
+
+        .div10 {
+            text-align: left;
+                    font-size: 14px;
+                    padding: 5px 0;
+                    font-family: Arial, Helvetica, sans-serif;
+        }
+        .div11{
+            text-align: left;
+            font-size: 34px; 
+            padding:5px 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .div12 {
+            text-align: left;
+            font-size: 16px;
+            padding: 5px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+                }
+                .div13 {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0;
+                }
+                .div13 i {
+                    font-size: 16px;
+                    color: #0044cc;
+                    margin-right: 10px;
+                }
+                .div13 p {
+                    margin: 0;
+                    font-size: 16px;
+                    color: #333;
+                }
+                .div14 {
+            color: white;
+            font-size: 0.8em;
+            width: 80px;
+
+            padding: 6px 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 1px solid white;
+            border-radius: 15px;
+            background-color: #0044cc;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .div15 {
+            font-size: 0.9em;
+            font-style: initial;
+            padding: 10px 20px;
+            top:20px;
+            padding-left: 5px;
+        }
+        .parent5{
+            position: relative;
+            top:1350px;
+            left:230px;
+            height:80px;
+            width:900px; 
+            background-color: rgb(249, 249, 249);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+
+        }
+        .child6{
+            height:80px;
+            width:800px;
+            border:1px solid white;
+            border-radius: 5px;
+            background-color: white;
+            position: absolute;
+            top:10px;
+            left:25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .div17{
+            position: absolute;
+            top:20px;
+            left:15px;
+        }
+        .div16{
+            position: absolute;
+            top:10px;
+            left:90px;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .div18{
+            font-size: 14px;
+            position: absolute;
+            left:90px;
+            top:50px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .div19 {
+            color: white;
+            font-size: 0.8em;
+            width: 90px;
+            padding: 6px 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 1px solid white;
+            border-radius: 15px;
+            background-color: #0044cc;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top:50px;
+            right:185px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent1">
+        <div class="child1">
+            <div class="div0"><p>logo</p></div>
+            <div class="div1"><i class="fa-solid fa-bars"></i></div>
+            <div class="div2">Mobile App<br>Development</div>
+            <div class="div3">
+                <div class="div3a">
+                    <i class="fa-solid fa-lightbulb"></i><p>Strategy</p>
+                </div>
+                <div class="div3b">
+                    <i class="fa-solid fa-paint-brush"></i>
+                    <p>UX Design</p>
+                </div>
+                <div class="div3c">
+                    <i class="fa-solid fa-code"></i>
+                    <p>Development</p>
+                </div>
+                <div class="div3d">
+                    <i class="fa-solid fa-vial"></i>
+                    <p>Testing</p>
+                </div>
+            </div>
+            <div class="div4">Image from <u> Freepik</u></div>
+        </div>
+    </div>
+    <div class="parent2">
+        <div class="child2">
+            <div class="div5"><p>We create super-awesome designs</p></div>
+            <div class="div6"><p>Duis aute dolor in reprehenderit in voluptate velit esse cilum dolore eu <br>fugiate nulla pariatur. Excepteur sint occaecat cupidatat non prodient.</p></div> 
+            <div class="div7">
+                <div class="div7a">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p1">Amazing Design</p>
+                    <p>Sample text.Click to select the text box.Click Again or double click to strat editing the text.</p>
+                </div>
+                <div class="div7b">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p1">Copywriting</p>
+                    <p>Sample text.Click to select the text box.Click Again or double click to strat editing the text.</p>
+                </div>
+                <div class="div7c">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p1">Development</p>
+                    <p>Sample text.Click to select the text box.Click Again or double click to strat editing the text.</p>
+                 </div>
+                <div class="div7d">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p1">24/7 Support</p>
+                    <p>Sample text.Click to select the text box.Click Again or double click to strat editing the text.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent3" style="height: 10px;">
+        <div class="child3">
+            <div class="div8">
+                <div class="div8a">Why choose UX studio as your<br> app design partner?</div>
+                <div class="div8b"><p>Duis aute dolor in reprehenderit in <br>voluptate velit esse cilum dolore eu fugiate nulla<br> pariatur. Excepteur sint occaecat cupidatat non<br> prodient, sunt in culpa qui officia deserunt</p></div>
+                <div class="div8c">Image from Freepik</div>
+                <div class="div8d"> LEARN MORE</div>
+            </div>
+            <div class="div9"><img src="./mobilep3.png"></div>
+        </div>
+        <div class="parent4">
+            <div class="child4"><img src="./lastpic.png"></div>
+            <div class="child5">
+                <div class="div10"><p>ABOUT US</p></div>
+                <div class="div11">Build your dream <br>website today</div>
+                <div class="div12">
+                    <p>Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read.</p>
+                </div>
+                <div class="div13">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Support via e-mail and Phone</p>
+                </div>
+                <div class="div13">
+                    <i class="fa-solid fa-language"></i>
+                    <p>Multi-language Support</p>
+                </div>
+                <div class="div14"> READ MORE</div>
+                <div class="div15">Image from Freepik</div>
+    
+            </div> 
+        </div>
+
+    </div>
+    <div class="parent5"> 
+        <div class="child6">
+            <div class="div17"><img src="./lasticon.jpg" style="height: 50px; width:50px;"></div>
+        <div class="div16"> Let's Get Started</div>
+        <div class="div18">Have a project or partnership in mind?<br>Contact us today for a free consultation.</div>
+        <div class="div19"> CONTACT US</div>
+    </div>
+
+    </div>
+</body>
+</html>

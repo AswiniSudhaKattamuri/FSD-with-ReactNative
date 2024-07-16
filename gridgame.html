@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Game</title>
+      <link rel="stylesheet" href="./gridgame.css"/>
+</head>
+<body>
+    <div id="grid"></div>
+    <div id="buttons"></div>
+
+    <script src="./gridgame.js">
+        
+    </script>
+</body> 
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Colored Block Grid Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            text-align: center;
+            vertical-align: middle;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .icon {
+            font-size: 24px;
+            color: blue;
+            transition: transform 0.3s ease-in-out;
+        }
+        .slide-right {
+            animation: slideRight 0.3s ease-in-out forwards;
+        }
+        .slide-left {
+            animation: slideLeft 0.3s ease-in-out forwards;
+        }
+        .slide-up {
+            animation: slideUp 0.3s ease-in-out forwards;
+        }
+        .slide-down {
+            animation: slideDown 0.3s ease-in-out forwards;
+        }
+        @keyframes slideRight {
+            from { transform: translateX(0); }
+            to { transform: translateX(50px); }
+        }
+        @keyframes slideLeft {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50px); }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(0); }
+            to { transform: translateY(-50px); }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(0); }
+            to { transform: translateY(50px); }
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #up {
+            background-color: #4a90e2;
+        }
+        #down {
+            background-color: #357ABD;
+        }
+        #left {
+            background-color: #2C6CB6;
+        }
+        #right {
+            background-color: #174085;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div id="grid"></div>
+    <div id="buttons"></div>
+
+    <script>
+        const n = 5; // Change this to any number to create n*n grid
+        const gridContainer = document.getElementById('grid');
+        const buttonsContainer = document.getElementById('buttons');
+        const directions = [
+            { id: 'up', label: 'Up', color: '#4a90e2' },
+            { id: 'down', label: 'Down', color: '#357ABD' },
+            { id: 'left', label: 'Left', color: '#2C6CB6' },
+            { id: 'right', label: 'Right', color: '#174085' }
+        ];
+        let coloredPosition = { row: 0, col: 0 };
+
+        function createGrid() {
+            const table = document.createElement('table');
+            for (let i = 0; i < n; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j < n; j++) {
+                    const cell = document.createElement('td');
+                    if (i === 0 && j === 0) {
+                        const icon = document.createElement('i');
+                        icon.className = 'fa-regular fa-user icon';
+                        cell.appendChild(icon);
+                    }
+                    cell.setAttribute('data-row', i);
+                    cell.setAttribute('data-col', j);
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+            gridContainer.appendChild(table);
+        }
+
+        function createButtons() {
+            directions.forEach(direction => {
+                const button = document.createElement('button');
+                button.id = direction.id;
+                button.textContent = direction.label;
+                button.style.backgroundColor = direction.color;
+                button.onclick = () => moveBlock(direction.id);
+                buttonsContainer.appendChild(button);
+            });
+        }
+
+        function moveBlock(direction) {
+            const { row, col } = coloredPosition;
+            let newRow = row, newCol = col;
+
+            if (direction === 'up' && row > 0) {
+                newRow--;
+                animateMovement('slide-up');
+            }
+            if (direction === 'down' && row < n - 1) {
+                newRow++;
+                animateMovement('slide-down');
+            }
+            if (direction === 'left' && col > 0) {
+                newCol--;
+                animateMovement('slide-left');
+            }
+            if (direction === 'right' && col < n - 1) {
+                newCol++;
+                animateMovement('slide-right');
+            }
+
+            setTimeout(() => {
+                const currentCell = document.querySelector(`td[data-row='${row}'][data-col='${col}']`);
+                const newCell = document.querySelector(`td[data-row='${newRow}'][data-col='${newCol}']`);
+
+                const icon = currentCell.querySelector('.icon');
+                if (icon) {
+                    currentCell.removeChild(icon);
+                    newCell.appendChild(icon);
+                }
+
+                coloredPosition = { row: newRow, col: newCol };
+            }, 300); // Adjust timeout to match animation duration
+        }
+
+        function animateMovement(animationClass) {
+            const icon = gridContainer.querySelector('.icon');
+            if (icon) {
+                icon.classList.add(animationClass);
+
+               
+                icon.addEventListener('animationend', () => {
+                    icon.classList.remove(animationClass);
+                });
+            }
+        }
+
+        createGrid();
+        createButtons();
+    </script>
+</body>
+</html> -->

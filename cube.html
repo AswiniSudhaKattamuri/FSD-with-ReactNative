@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .parent{
+                width:1500px;
+                height: 680px;
+                border:2px solid black;
+                perspective: 100px;
+                perspective: 70px;
+                position: relative;
+            }
+            .child1{
+                width:530px;
+                position: absolute;
+                height:130px;
+                top:23%;
+                left:32.3%;
+                background-color: rgb(35, 6, 90);
+                transform-style: preserve-3d;
+                transform: rotateX(-90deg);
+            }
+            .child2{
+                width:530px;
+                position: absolute;
+                bottom: 23.2%;
+                left:32.3%;
+                height:130px;
+                background-color: rgb(35, 6, 90);
+                transform-style: preserve-3d;
+                transform: rotateX(90deg);
+            }
+            .child3{
+                width:128.5px;
+                position: absolute;
+                left:26.6%;
+                top:31.5%;
+                height:248px;
+                background-color:  rgb(137, 33, 137);
+                transform-style: preserve-3d;
+                transform: rotateY(90deg);
+            }
+            .child4{
+                width:127px;
+                position: absolute;
+                top:31.5%;
+                right:24%;
+                height:247px;
+                background-color:  rgb(138, 35, 138);
+                transform-style: preserve-3d;
+                transform: rotateY(-90deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child1"></div>
+            <div class="child2"></div>
+            <div class="child3"></div>
+            <div class="child4"></div>
+        </div>
+   </body>
+</html>

@@ -1,0 +1,22 @@
+*{
+    background-color:rgb(186, 168, 247);
+}
+.myclass{
+    color: blueviolet;
+    font-size: x-large;
+}
+/* .first{
+    color: cornflowerblue;
+} */
+.second{
+    background-color: rgb(218, 235, 236);
+    font-size: xx-large;
+    font-style: italic;
+}
+.first{
+    color: rgb(237, 100, 232);
+}
+.mydiv p{
+    color: indianred;
+    font-size: xx-large;
+}

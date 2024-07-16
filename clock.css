@@ -1,0 +1,91 @@
+body{
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:500px;
+    width:500px;
+
+}
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border: 3px solid black;
+  }
+  
+/* .clockface {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: rgb(249, 166, 166);
+    border: 1px solid black;
+    
+} */
+.hourhand, .minutehand, .secondhand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    border-radius: 10px;
+    transform-origin: bottom left;
+}
+.hourhand {
+    transform: rotate(0deg);
+    background-color: black;
+    animation: rotate-hour-hand 43200s linear infinite;
+    
+}
+.minutehand {
+    transform: rotate(0deg);
+    background-color: yellow;
+    animation: rotate-minute-hand 3600s linear infinite;
+}
+.secondhand {
+    transform: rotate(0deg);
+    background-color: rgb(241, 4, 4);
+    animation: rotate-second-hand 60s linear infinite;
+}
+.clockcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #170d0d;
+}
+@keyframes rotate-hour-hand {
+    0% {
+      transform: rotate(0deg) ;
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotate-minute-hand {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotate-second-hand {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}

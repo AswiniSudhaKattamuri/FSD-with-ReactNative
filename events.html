@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <!-- <link rel="stylesheet" href="./events.js" /> -->
+    <script src="./events.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Form</h1>
+    </centre>
+    <div class="form">
+        <form>
+            <label><b>Enter firstname:</b></label>
+            <input type="text" onchange="{modhatiperu(event)}"/>
+            <br>
+            <br>
+            <label><b>Enter lastname:</b></label>
+            <input type="text" onchange="{akhariperu(event)}"/>
+            <br>
+            <br>
+            <label><b>Enter DOB:</b></label>
+            <input type="date" onchange="{DOBH(event)}"/>
+            <br>
+            <br>
+            <label><b>Enter Age:</b></label>
+            <input type="number" onchange="{vayass(event)}"/>
+            <br>
+            <br>
+            <label><b>Enter Phone Number:</b></label>
+            <input type="number" onchange="{number(event)}" /><br>
+            <br>
+            <label><b>Enter Father Name:</b></label>
+            <input type="text" onchange="{fathername(event)}"/>
+            <br>
+            <br>
+            <label><b>Enter Mother Name:</b></label>
+            <input type="text" onchange="{mothername(event)}"/>
+            <br>
+            <br>
+            <label><b>Enter Address:</b></label>
+            <textarea value="address"  onchange="{addre(event)}" >Address</textarea>
+            <br>
+            <br>
+            <label><b>Gender:</b></label>
+            <select onchange="{gender(event)}">
+                <option value="None">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select>
+            <br>
+            <br>
+            <label><b>Enter Certifications:</b></label>
+            <textarea></textarea>
+            <br>
+            <br>
+            <label><b>Academic Details</b></label>
+            <table border="1">
+                <thead>
+                <tr>
+                <th style="height:20px; width:110px">NI</th>
+                <th style="height:20px; width:110px">Year of passout</th>
+                <th style="height:20px; width:110px">percentage</th>
+                <th style="height:20px; width:110px">Place of study</th>
+                </tr>
+                <tr>
+                    <!-- <td><b></b></td> -->
+                    <td><input type="text" style="height:20px; width:110px"  placeholder="ssc" onchange="{ssc(event)}" ></td>
+                    <td><input type="date" style="height:20px; width:110px"  onchange="{sscy(event)}" ></td>
+                    <td><input type="number" style="height:20px; width:110px"  onchange="{sscper(event)}" ></td>
+                    <td><input type="text" style="height:20px; width:110px"  onchange="{sscp(event)}" ></td>
+                </tr>
+                <tr>
+                    <td><input type="text" style="height:20px; width:110px"  placeholder="inter" onchange="{inter(event)}" ></td>
+                    <td><input type="date" style="height:20px; width:110px"  onchange="{intery(event)}" ></td>
+                    <td><input type="number" style="height:20px; width:110px"  onchange="{interper(event)}" ></td>
+                    <td><input type="text" style="height:20px; width:110px"  onchange="{interp(event)}" ></td>
+                </tr>
+                <tr>
+                    <!-- <td><b>B.Tech</b></td> -->
+                    <td><input type="text" style="height:20px; width:110px"  placeholder="btech" onchange="{btech(event)}" ></td>
+                    <td><input type="date" style="height:20px; width:110px"  onchange="{btechy(event)}" ></td>
+                    <td><input type="number" style="height:20px; width:110px"  onchange="{btechper(event)}" ></td>
+                    <td><input type="text" style="height:20px; width:110px"  onchange="{btechp(event)}" ></td>
+                </tr> 
+            </thead>
+            </table>
+            <br>
+            <br>
+            <label><b>Skills:</b></label>
+            <input type="text" onchange="{skills(event)}"/>
+            <br>
+            <br>
+            <label><b>Hobbies:</b></label>
+            <input type="text" onchange="{hobbies(event)}"/>
+            <br>
+            <br>
+            <label><b>Profile pic</b></label>
+            <input type="file" onchange="{profile(event)}"/>
+            <br>
+            <br>
+            <label><b>Badge:</b></label>
+            <input type="text" onchange="{badge(event)}"/>
+            <br>
+            <br>
+            <label><b>Description:</b></label>
+            <textarea value="Description"  onchange="{des(event)}" ></textarea>
+            
+
+            
+        </form>
+        <button type="submit" onclick="submit(event)">Submit</button>
+    </div>
+</body>
+
+</html>
